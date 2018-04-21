@@ -12,6 +12,7 @@
   ],
   "license": "CC-BY-NC-SA-3.0",
   "dependencies": {
+    "bottleneck": "^2.3.0",
     "serialport": "^3.1.2"
   }
 }
