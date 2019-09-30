@@ -90,14 +90,14 @@ char endMarker = '%';
  * Execute the right function
  */
 void executeFunction(String json_data) {
-  StaticJsonBuffer<200> jsonBuffer;
-  JsonObject& v = jsonBuffer.parseObject(json_data);
-  //on décompose la chaine de cartère
-  if ( v["function_name"] == String("SendRadioCode") ) {
-    SendRadioCode(v["period"], v["code"]);
-  }else if ( v["function_name"] == String("SendNewCode") ) {
+  StaticJsonDocument<200> jsonDoc;
+  deserializeJson(jsonDoc, json_data);
+  //on décompose la chaine de caractères
+  if ( jsonDoc["function_name"] == String("SendRadioCode") ) {
+    SendRadioCode(jsonDoc["period"], jsonDoc["code"]);
+  } else if ( jsonDoc["function_name"] == String("SendNewCode") ) {
     //Serial.print("sending new code");
-    SendNewCode(v["period"], v["Addr"], v["group"], v["value"], v["unit"]);
+    SendNewCode(jsonDoc["period"], jsonDoc["Addr"], jsonDoc["group"], jsonDoc["value"], jsonDoc["unit"]);
   } 
 }
 
