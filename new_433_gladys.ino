@@ -6,7 +6,7 @@
  * and ShowReceivedCodeNewKaku examples of RemoteSwitch and the
  * ThermoHygroReceiver of RemoteSensor all at the same time!
  *
- * After uploading, enable the serial monitor at 115200 baud.
+ * After uploading, enable the serial monitor at 9600 baud.
  * When you press buttons on a 433MHz remote control, as supported by 
  * RemoteSwitch or NewRemoteSwitch, the code will be echoed.
  * At the same time, if data of a remote thermo/hygro-sensor is
