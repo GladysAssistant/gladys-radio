@@ -9,11 +9,11 @@ This version is now compatible with various brand such as DI-O.
 If you had previous version of this module (and had serial module installed), you need to uninstall it as it is not needed anymore and can cause this module to fail(two modules can't connect to the same serial interface).
 
 - Then, install this module in Gladys
-- Push the [arduino code](https://github.com/isokar/gladys-radioemitter/blob/master/new_433_gladys.ino) to your arduino with the [Arduino IDE](https://www.arduino.cc/en/main/software). You need to have `ArduinoJson` and [`433MHzForArduino`](https://bitbucket.org/fuzzillogic/433mhzforarduino/src) libraries installed. To install the libraries, in the arduino IDE (version > 1.6) go to "Sketch" => "Include Library" => "Manage Libraries". Then search "ArduinoJson" and click on "install".
-- Connect your arduino in USB to your Raspberry Pi
+- Push the [Arduino code](https://github.com/isokar/gladys-radioemitter/blob/master/new_433_gladys.ino) to your arduino with the [Arduino IDE](https://www.arduino.cc/en/main/software). You need to have `ArduinoJson` and [`433MHzForArduino`](https://bitbucket.org/fuzzillogic/433mhzforarduino/src) libraries installed. To install the libraries, in the arduino IDE (version > 1.6) go to "Sketch" => "Include Library" => "Manage Libraries". Then search "ArduinoJson" and click on "install". To install 433MHzForArduino, you have to download it, and unzip the content in your Arduino directory (find it in Arduino > Preferences menu) then directory libraries (ex: /home/user/Documents/Arduino/libraries)
+- Connect your Arduino in USB to your Raspberry Pi
 - Reboot Gladys
-- Check your console for the correct serial_port ton configure for your Arduino (if you change the parameter, Gladys need to reboot to take it into account)
-- To add devices to Gladys you can just activate it(via remote control for exemple). Otherwise, you can create manually in the Device view with the following info => 
+- Check your console to find the correct serial_port to configure your Arduino (if you change the parameter, Gladys need to be  reboot to take it into account)
+- To add devices to Gladys you can just activate it (via remote control for exemple). Otherwise, you can create manually in the Device view with the following info => 
 
 ### For old fashion
 
